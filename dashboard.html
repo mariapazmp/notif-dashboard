@@ -11,19 +11,79 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<section class="dashboard">
-    <nav class="nav-menu">
+    <section class="sidebar">
         <div class="logo">
             <img src="" alt="Logo Notif app, by Veritran">
         </div>
-        <div class="nav-menu__top-item">
+        <div class="sidebar__nav-top-item">
             <span>Pablo Sanchez</span>
             <i class="material-icons md-48">Settings</i>
         </div>
-    </nav>
-</section>
-<footer>
-    <span>Made with love by Maria Paz.</span>
-</footer>
+        <nav class="nav-menu">
+            <ul class="nav-menu__list ">
+                <li class="nav-menu__item m-level-1">
+                    <a href="#"><i class="ma">0</i>Campaigns</a>
+                </li>
+                <li class="nav-menu__item m-level-1 nav-menu__item--opened">
+                    <a href="#"><i class="ma">0</i>Notification</a>
+                    <ul class="nav-menu__sub m-level-2">
+                        <li class="nav-menu__item m-level-2">
+                            <a href="#">Templates</a>
+                        </li>
+                        <li class="nav-menu__item m-level-2">
+                            <a href="#">Messages</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-menu__item m-level-1">
+                    <a href="#"><i class="ma">0</i>Users</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <main class="dashboard">
+        <header>
+            <button class="btn-collapse"><i class="ma">Collapse sidebar</i></button>
+            <button class="btn-grid"><i class="ma">Change grid</i></button>
+        </header>
+        <div class="dashboard-body">
+            <section id="notification-templates">
+                <h1>Notification Templates</h1>
+                <h2>Segmentos de personas</h2>
+
+                <div class="ctn-options">
+                    <div class="search-bar">
+                        <form>
+                            <i class="ma">Search</i>
+                            <input class="searchbar__field" type="search" name="template-search" placeholder="Search by Template Name">
+                        </form>
+                    </div>
+                    <button class="ctn-options__grid"><i class="ma">Grid/List</i></button>
+                    <button class="ctn-options__cta"><i class="ma">Plus</i>Create Grid</button>
+                </div>
+                <div class="templates-list">
+                    <div class="content-card">
+                        <div class="content-card__img"><img src="" alt="broken image of template"></div>
+                        <div class="content-card__body">
+                            <span class="content-card__label">Template Name</span>
+                            <h3 class="content-card__title">Avance_tarjeta</h3>
+
+                            <span class="content-card__label">Description</span>
+                            <div class="content-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra tortor nisi, nec pretium lectus consectetur et. Vivamus volutpat.</div>
+                        </div>
+                        <div class="content-card__options">
+                            <a href="#">App</a>
+                            <a href="#">Push</a>
+
+                            <button class="content-card__edit"><i class="ma"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <span>©2019 - VeriTran - NOTIF 1.12.7.0</span>
+    </footer>
 </body>
 </html>
