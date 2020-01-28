@@ -1,0 +1,45 @@
+html, body {
+  margin: 0;
+  height: 100%; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+.sidebar .logo {
+  background: #222222;
+  text-align: center; }
+.sidebar .sidebar__nav-item {
+  background: #1c1c1c; }
+
+.hamburger {
+  align-content: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem; }
+  .hamburger .hamburger__ic-menu {
+    order: 1;
+    flex: 1 0 0%; }
+  .hamburger .hamburger__logo {
+    order: 2; }
+  .hamburger .hamburger__view-mode {
+    align-self: center;
+    order: 3; }
+
+body {
+  color: #fdfdfd;
+  font-family: 'Poppins', sans-serif; }
+
+.sidebar {
+  display: none;
+  /*float: left;
+  width: 20%;*/ }
+
+main {
+  background: #0f0f0f;
+  /*float: left;
+  width: 80%;*/ }
+
+.header__top {
+  display: none; }

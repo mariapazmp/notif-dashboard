@@ -1,0 +1,39 @@
+@import 'colors';
+
+h1 {
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin: 0.3rem 0 0;
+}
+
+h2 {
+  color: $secondary-active;
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 0 0 0.3rem;
+}
+
+button.primary-btn {
+  background: $cta;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.overlay {
+  background: rgba($secondary-active, .7);
+  height: 100%;
+  overflow: hidden;
+  left: 0;
+  position: fixed;
+  -webkit-tap-highlight-color: transparent;
+  top: 0;
+  width: 100%;
+  will-change: opacity;
+  z-index: 3;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}

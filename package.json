@@ -1,0 +1,23 @@
+{
+  "name": "sass",
+  "version": "1.25.0",
+  "description": "Sass CSS extension language",
+  "main": "dashboard.js",
+  "dependencies": {
+    "sass": "^1.25.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariapazz/notif-dashboard.git"
+  },
+  "author": "Maria Paz Muñoz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariapazz/notif-dashboard/issues"
+  },
+  "homepage": "https://github.com/mariapazz/notif-dashboard#readme"
+}

@@ -1,0 +1,19 @@
+.sidebar .logo {
+  background: #222222;
+  text-align: center; }
+.sidebar .sidebar__nav-item {
+  background: #1c1c1c; }
+
+.hamburger {
+  align-content: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem; }
+  .hamburger .hamburger__ic-menu {
+    order: 1;
+    flex: 1 0 0%; }
+  .hamburger .hamburger__logo {
+    order: 2; }
+  .hamburger .hamburger__view-mode {
+    align-self: center;
+    order: 3; }
