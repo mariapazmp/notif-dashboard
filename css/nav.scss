@@ -7,6 +7,13 @@
   position: fixed;
   transition: all .3s;
 
+  @media (min-width: 768px) {
+    background: $primary;
+    display: block;
+    left: 0;
+    position: relative;
+  }
+
   a {
     color: $text;
     text-decoration: none;
@@ -46,12 +53,6 @@
       display: none;
     }
   }
-
-  @media (min-width: 768px) {
-    display: block;
-    left: 0;
-    position: relative;
-  }
 }
 
 .sidebar__nav-item {
@@ -75,6 +76,9 @@
   width: 100%;
   z-index: 2;
 
+  @media (min-width: 768px) {
+    display: none;
+  }
 
   i.fas {
     font-size: 1.4rem;
