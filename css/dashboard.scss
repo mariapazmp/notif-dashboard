@@ -8,12 +8,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.sidebar {
-  display: none;
-  /*float: left;
-  width: 20%;*/
-}
-
 main {
   background: $global-background;
   /*float: left;
@@ -71,7 +65,7 @@ main {
   padding: 0.3rem 0 0.3rem 0.3rem;
   left: 1rem;
 
-  &:active, &:focus {
+  &.active, &.focus {
     width: calc(100% - 38px);
 
     .search-bar__field {

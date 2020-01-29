@@ -3,9 +3,20 @@
 
 .sidebar {
   font-weight: 400;
+  left: -300px;
+  position: fixed;
+  transition: all .3s;
+
   a {
     color: $text;
     text-decoration: none;
+  }
+
+  .m-level-2 a {
+    &:active, &:hover, &:focus {
+      color: $text-active;
+      font-weight: bold;
+    }
   }
 
   .logo {
@@ -21,12 +32,11 @@
     background: $primary;
     display: block;
     height: 100%;
-    //left: -300px;
-    position: absolute;
     top: 0;
     transition: .3s all;
     width: calc(100vw - 80px);
     z-index: 4;
+    left: 0;
 
     -webkit-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
@@ -35,6 +45,12 @@
     .logo {
       display: none;
     }
+  }
+
+  @media (min-width: 768px) {
+    display: block;
+    left: 0;
+    position: relative;
   }
 }
 
@@ -89,14 +105,11 @@
 .nav-menu__item {
   border-bottom: 1px $border solid;
   font-size: 1.2rem;
+  position: relative;
 
   a {
     display: block;
     padding: 1.5rem;
-
-    &:active, &:hover, &:focus {
-      color: $text-active;
-    }
   }
 
   i {
@@ -105,7 +118,26 @@
 
   .m-level-2 {
     border-bottom: none;
+    display: none;
     font-weight: 300;
+    transition: all .4s;
+  }
+}
+
+.m-parent {
+  &::after {
+    color: $text;
+    content: "\f078";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 1rem;
+    top: 1.6rem;
+    transition: all .4s;
+  }
+
+  &.nav-menu__item--opened::after {
+    display: block;
+    transform: rotate(180deg)
   }
 }
 
@@ -117,5 +149,9 @@
 
 .nav-menu__item--opened {
   background: $global-background;
+
+  .m-level-2 {
+    display: block;
+  }
 }
 
