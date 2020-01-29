@@ -1,3 +1,18 @@
+.content-card {
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 1rem;
+  padding-right: 0.5rem;
+  width: 50%;
+  flex: 0 50%;
+  flex-wrap: wrap;
+
+  &:nth-child(2n) {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
+}
+
 .content-card__img {
   img {
     border-radius: 0.5rem 0.5rem 0 0;
@@ -73,28 +88,18 @@
   }
 }
 
-.view-mode-grid {
-  .content-card {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 50%;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-    padding-right: 0.5rem;
-    width: 50%;
-
-    &:nth-child(2n) {
-      padding-right: 0;
-      padding-left: 0.5rem;
-    }
-  }
-}
-
 .view-mode-list {
   .content-card {
-    display: flex;
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
+    width: 100%;
+    flex: 1;
+    flex-wrap: nowrap;
+    padding-right: 0;
+
+    &:nth-child(2n) {
+      padding-left: 0;
+    }
   }
 
   .content-card__img {

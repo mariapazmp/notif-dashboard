@@ -87,6 +87,9 @@ main {
   .search-bar__field {
     background: transparent;
     border: 0;
+    color: $text;
+    font-weight: 300;
+    font-size: 1.1rem;
     padding: 0;
     width: 0;
     transition: all 0.5s;
@@ -97,5 +100,9 @@ main {
   display: flex;
   flex-wrap: wrap;
   margin-top: 1.5rem;
+}
+
+.change-view-mode {
+  cursor: pointer;
 }
 

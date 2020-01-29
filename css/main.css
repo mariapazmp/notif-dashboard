@@ -144,6 +144,18 @@ button.primary-btn {
   .nav-menu__item--opened .m-level-2 {
     display: block; }
 
+.content-card {
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 1rem;
+  padding-right: 0.5rem;
+  width: 50%;
+  flex: 0 50%;
+  flex-wrap: wrap; }
+  .content-card:nth-child(2n) {
+    padding-right: 0;
+    padding-left: 0.5rem; }
+
 .content-card__img img {
   border-radius: 0.5rem 0.5rem 0 0;
   width: 100%;
@@ -202,22 +214,15 @@ button.primary-btn {
     flex: 0 20px;
     padding: 0; }
 
-.view-mode-grid .content-card {
-  box-sizing: border-box;
-  display: flex;
-  flex: 0 50%;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-  padding-right: 0.5rem;
-  width: 50%; }
-  .view-mode-grid .content-card:nth-child(2n) {
-    padding-right: 0;
-    padding-left: 0.5rem; }
-
 .view-mode-list .content-card {
-  display: flex;
   border-radius: 0.5rem;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  width: 100%;
+  flex: 1;
+  flex-wrap: nowrap;
+  padding-right: 0; }
+  .view-mode-list .content-card:nth-child(2n) {
+    padding-left: 0; }
 .view-mode-list .content-card__img {
   width: 40%; }
   .view-mode-list .content-card__img img {
@@ -296,6 +301,9 @@ main {
   .search-bar .search-bar__field {
     background: transparent;
     border: 0;
+    color: #fdfdfd;
+    font-weight: 300;
+    font-size: 1.1rem;
     padding: 0;
     width: 0;
     transition: all 0.5s; }
@@ -304,3 +312,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   margin-top: 1.5rem; }
+
+.change-view-mode {
+  cursor: pointer; }

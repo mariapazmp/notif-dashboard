@@ -8,11 +8,14 @@ $( document ).ready(function() {
 });
 
 function changeViewMode() {
+    $(".change-view-mode").on('click', function (e) {
+        $(".templates-list").toggleClass("view-mode-list");
+    });
 }
 
 function expandSearchBar() {
-    $(".search-bar").on('click', function () {
-        $(this).toggleClass("active");
+    $(".search-bar i.fa-search").on('click', function (e) {
+        $(".search-bar").toggleClass("active");
     });
 }
 
