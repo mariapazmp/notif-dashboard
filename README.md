@@ -10,5 +10,6 @@ A partir del diseño para escritorio entregado, se diseñó e implementó la ver
 
 Set de íconos usado: https://fontawesome.com/icons
 
-Para correr la prueba:
-Abra el archivo dashboard.html en su navegador. Los estilos en Sass ya han sido transpilados previamente.
+#### Para correr la prueba:
+Descargue la carpeta del proyecto y abra el archivo dashboard.html en su navegador. 
+Los estilos en Sass ya han sido transpilados previamente.
