@@ -1,5 +1,4 @@
 @import 'colors';
-@import 'global';
 
 .sidebar {
   font-weight: 400;
@@ -7,9 +6,14 @@
   position: fixed;
   transition: all .3s;
 
+  -webkit-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
+
   @media (min-width: 768px) {
     background: $primary;
     display: block;
+    flex: 0 0 14rem;
     left: 0;
     position: relative;
   }
@@ -17,22 +21,10 @@
   a {
     color: $text;
     text-decoration: none;
-  }
 
-  .m-level-2 a {
-    &:active, &:hover, &:focus {
-      color: $text-active;
-      font-weight: bold;
+    @media (min-width: 768px) {
+      font-size: 0.9rem;
     }
-  }
-
-  .logo {
-    background: $primary;
-    text-align: center;
-  }
-
-  .sidebar__nav-item {
-    background: $secondary;
   }
 
   &.mobile-active {
@@ -45,21 +37,51 @@
     z-index: 4;
     left: 0;
 
-    -webkit-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
-
     .logo {
       display: none;
     }
   }
+
+  &.hidden {
+    @media (min-width: 768px) {
+      left: -300px;
+      display: none;
+    }
+  }
+
+  .m-level-2 a {
+    &:active, &:hover, &:focus {
+      color: $text-active;
+      font-weight: bold;
+    }
+  }
+
+  .logo {
+    background: $primary;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      padding: 0.9rem 1rem 0.65rem;
+    }
+
+  }
 }
 
 .sidebar__nav-item {
+  align-items: center;
+  background: $secondary;
   padding: 1.3rem 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
+  @media (min-width: 768px){
+    padding: 0.8rem 1rem;
+    border-bottom: 1px $border solid;
+
+    a {
+      font-size: 0.8rem;
+    }
+  }
 }
 
 .hamburger {
@@ -102,10 +124,6 @@
   }
 }
 
-.nav-menu {
-
-}
-
 .nav-menu__item {
   border-bottom: 1px $border solid;
   font-size: 1.2rem;
@@ -128,23 +146,6 @@
   }
 }
 
-.m-parent {
-  &::after {
-    color: $text;
-    content: "\f078";
-    font-family: FontAwesome;
-    position: absolute;
-    right: 1rem;
-    top: 1.6rem;
-    transition: all .4s;
-  }
-
-  &.nav-menu__item--opened::after {
-    display: block;
-    transform: rotate(180deg)
-  }
-}
-
 .nav-menu__sub {
   li:first-child a {
     padding: 0.5rem 1.5rem;
@@ -156,6 +157,28 @@
 
   .m-level-2 {
     display: block;
+  }
+}
+
+.nav-menu__item.m-parent {
+  &::after {
+    color: $text;
+    content: "\f078";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 1rem;
+    top: 1.6rem;
+    transition: all .4s;
+
+    @media (min-width: 768px) {
+      font-size: 0.8rem;
+      top: 1.8rem;
+    }
+  }
+
+  &.nav-menu__item--opened::after {
+    display: block;
+    transform: rotate(180deg)
   }
 }
 

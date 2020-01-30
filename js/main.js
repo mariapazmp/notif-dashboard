@@ -1,9 +1,9 @@
 $( document ).ready(function() {
-    console.log("Ready!");
     toggleSubmenu();
-    // Mobile functions
-    toggleMobileSidebar();
+    collapseSidebar();
     changeViewMode();
+
+    toggleMobileSidebar();
     expandSearchBar();
 });
 
@@ -35,4 +35,11 @@ function toggleMobileSidebar() {
         $(".overlay").removeClass("active");
         $("section.sidebar").removeClass("mobile-active");
     });
+}
+
+function collapseSidebar() {
+    $(".btn-collapse").on("click", function () {
+        $("section.sidebar").toggleClass("hidden");
+        $(this).toggleClass("active");
+    })
 }

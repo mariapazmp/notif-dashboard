@@ -1,7 +1,8 @@
+@import 'card';
 @import 'colors';
+@import 'global';
 @import 'reset';
 @import 'nav';
-@import 'card';
 
 body {
   color: $text;
@@ -37,6 +38,7 @@ footer {
 
   @media (min-width: 768px) {
     display: flex;
+    padding: 1.3rem 1rem;
   }
 
   div[class^="btn-"] {
@@ -45,6 +47,12 @@ footer {
 
   .btn-collapse {
     color: $cta;
+    padding: 0 1rem 0 0.5rem;
+    transition: all .3s;
+
+    &.active {
+      transform: rotate(180deg);
+    }
   }
 }
 
@@ -54,11 +62,15 @@ footer {
 
   h1, h2 {
     padding: 0 1rem;
+
+    @media (min-width: 768px) {
+      padding: 0 1.5rem;
+    }
   }
 
   @media (min-width: 768px) {
     margin-top: 0;
-    padding: 1rem;
+    padding: 1.5rem;
   }
 }
 
@@ -66,6 +78,10 @@ footer {
   background: $secondary;
   border-radius: 0.5rem;
   padding: 0.5rem 0;
+
+  @media (min-width: 768px) {
+    padding: 1.5rem 0;
+  }
 }
 
 .ctn-options {
@@ -85,6 +101,7 @@ footer {
     background: transparent;
     border-top: none;
     margin-top: 1rem;
+    padding: 0.7rem 1rem 0.7rem 1.5rem;
     position: relative;
   }
 }
@@ -94,10 +111,22 @@ footer {
   border-radius: 0.3rem;
   background: $border;
   padding: 0.5rem;
+
+  @media (min-width: 768px)  {
+    padding: 0.5rem 1rem
+  }
+
+  &:hover {
+    background: $element-background;
+  }
 }
 
 .ctn-options__button.primary-btn {
   margin-left: 0.6rem;
+
+  &:hover {
+    background: rgba($cta, 0.7);
+  }
 }
 
 .search-bar {
@@ -108,9 +137,10 @@ footer {
   left: 1rem;
 
   @media (min-width: 768px) {
-    width: 15rem;
     border-radius: 0.2rem;
+    left: 1.5rem;
     padding: 0.4rem;
+    width: 15rem;
   }
 
   &.active, &.focus {
@@ -160,7 +190,7 @@ footer {
   margin-top: 1.5rem;
 
   @media (min-width: 768px) {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
 }
 
